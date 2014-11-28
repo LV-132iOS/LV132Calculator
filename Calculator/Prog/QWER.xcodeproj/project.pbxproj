@@ -1,0 +1,626 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		767D1DCB1A2897D7006C0F6E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767D1DCA1A2897D7006C0F6E /* Foundation.framework */; };
+		767D1DCD1A2897D7006C0F6E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767D1DCC1A2897D7006C0F6E /* CoreGraphics.framework */; };
+		767D1DCF1A2897D7006C0F6E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767D1DCE1A2897D7006C0F6E /* UIKit.framework */; };
+		767D1DD51A2897D7006C0F6E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 767D1DD31A2897D7006C0F6E /* InfoPlist.strings */; };
+		767D1DD71A2897D7006C0F6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1DD61A2897D7006C0F6E /* main.m */; };
+		767D1DDB1A2897D7006C0F6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1DDA1A2897D7006C0F6E /* AppDelegate.m */; };
+		767D1DDE1A2897D7006C0F6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 767D1DDC1A2897D7006C0F6E /* Main.storyboard */; };
+		767D1DE11A2897D7006C0F6E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1DE01A2897D7006C0F6E /* ViewController.m */; };
+		767D1DE31A2897D7006C0F6E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 767D1DE21A2897D7006C0F6E /* Images.xcassets */; };
+		767D1DEA1A2897D7006C0F6E /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767D1DE91A2897D7006C0F6E /* XCTest.framework */; };
+		767D1DEB1A2897D7006C0F6E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767D1DCA1A2897D7006C0F6E /* Foundation.framework */; };
+		767D1DEC1A2897D7006C0F6E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 767D1DCE1A2897D7006C0F6E /* UIKit.framework */; };
+		767D1DF41A2897D7006C0F6E /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 767D1DF21A2897D7006C0F6E /* InfoPlist.strings */; };
+		767D1DF61A2897D7006C0F6E /* QWERTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1DF51A2897D7006C0F6E /* QWERTests.m */; };
+		767D1E321A28987B006C0F6E /* _DDDecimalFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1E011A28987B006C0F6E /* _DDDecimalFunctions.m */; };
+		767D1E331A28987B006C0F6E /* _DDFunctionEvaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1E031A28987B006C0F6E /* _DDFunctionEvaluator.m */; };
+		767D1E341A28987B006C0F6E /* _DDFunctionExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1E051A28987B006C0F6E /* _DDFunctionExpression.m */; };
+		767D1E351A28987B006C0F6E /* _DDFunctionTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1E071A28987B006C0F6E /* _DDFunctionTerm.m */; };
+		767D1E361A28987B006C0F6E /* _DDGroupTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1E091A28987B006C0F6E /* _DDGroupTerm.m */; };
+		767D1E371A28987B006C0F6E /* _DDNumberExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1E0B1A28987B006C0F6E /* _DDNumberExpression.m */; };
+		767D1E381A28987B006C0F6E /* _DDNumberTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1E0D1A28987B006C0F6E /* _DDNumberTerm.m */; };
+		767D1E391A28987B006C0F6E /* _DDOperatorTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1E0F1A28987B006C0F6E /* _DDOperatorTerm.m */; };
+		767D1E3A1A28987B006C0F6E /* _DDParserTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1E111A28987B006C0F6E /* _DDParserTerm.m */; };
+		767D1E3B1A28987B006C0F6E /* _DDPrecisionFunctionEvaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1E131A28987B006C0F6E /* _DDPrecisionFunctionEvaluator.m */; };
+		767D1E3C1A28987B006C0F6E /* _DDRewriteRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1E151A28987B006C0F6E /* _DDRewriteRule.m */; };
+		767D1E3D1A28987B006C0F6E /* _DDVariableExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1E171A28987B006C0F6E /* _DDVariableExpression.m */; };
+		767D1E3E1A28987B006C0F6E /* _DDVariableTerm.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1E191A28987B006C0F6E /* _DDVariableTerm.m */; };
+		767D1E3F1A28987B006C0F6E /* DDExpression.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1E1B1A28987B006C0F6E /* DDExpression.m */; };
+		767D1E401A28987B006C0F6E /* DDExpressionRewriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1E1D1A28987B006C0F6E /* DDExpressionRewriter.m */; };
+		767D1E411A28987B006C0F6E /* DDMathEvaluator.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1E201A28987B006C0F6E /* DDMathEvaluator.m */; };
+		767D1E421A28987B006C0F6E /* DDMathOperator.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1E221A28987B006C0F6E /* DDMathOperator.m */; };
+		767D1E431A28987B006C0F6E /* DDMathStringToken.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1E271A28987B006C0F6E /* DDMathStringToken.m */; };
+		767D1E441A28987B006C0F6E /* DDMathStringTokenizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1E291A28987B006C0F6E /* DDMathStringTokenizer.m */; };
+		767D1E451A28987B006C0F6E /* DDParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1E2B1A28987B006C0F6E /* DDParser.m */; };
+		767D1E461A28987B006C0F6E /* DDParserTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1E2D1A28987B006C0F6E /* DDParserTypes.m */; };
+		767D1E471A28987B006C0F6E /* DDTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1E2F1A28987B006C0F6E /* DDTypes.m */; };
+		767D1E481A28987B006C0F6E /* NSString+DDMathParsing.m in Sources */ = {isa = PBXBuildFile; fileRef = 767D1E311A28987B006C0F6E /* NSString+DDMathParsing.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		767D1DED1A2897D7006C0F6E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 767D1DBF1A2897D7006C0F6E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 767D1DC61A2897D7006C0F6E;
+			remoteInfo = QWER;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		767D1DC71A2897D7006C0F6E /* QWER.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QWER.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		767D1DCA1A2897D7006C0F6E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		767D1DCC1A2897D7006C0F6E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		767D1DCE1A2897D7006C0F6E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		767D1DD21A2897D7006C0F6E /* QWER-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QWER-Info.plist"; sourceTree = "<group>"; };
+		767D1DD41A2897D7006C0F6E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		767D1DD61A2897D7006C0F6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		767D1DD81A2897D7006C0F6E /* QWER-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QWER-Prefix.pch"; sourceTree = "<group>"; };
+		767D1DD91A2897D7006C0F6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		767D1DDA1A2897D7006C0F6E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		767D1DDD1A2897D7006C0F6E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		767D1DDF1A2897D7006C0F6E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		767D1DE01A2897D7006C0F6E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		767D1DE21A2897D7006C0F6E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		767D1DE81A2897D7006C0F6E /* QWERTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QWERTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		767D1DE91A2897D7006C0F6E /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		767D1DF11A2897D7006C0F6E /* QWERTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "QWERTests-Info.plist"; sourceTree = "<group>"; };
+		767D1DF31A2897D7006C0F6E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		767D1DF51A2897D7006C0F6E /* QWERTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QWERTests.m; sourceTree = "<group>"; };
+		767D1E001A28987B006C0F6E /* _DDDecimalFunctions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDDecimalFunctions.h; sourceTree = "<group>"; };
+		767D1E011A28987B006C0F6E /* _DDDecimalFunctions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDDecimalFunctions.m; sourceTree = "<group>"; };
+		767D1E021A28987B006C0F6E /* _DDFunctionEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDFunctionEvaluator.h; sourceTree = "<group>"; };
+		767D1E031A28987B006C0F6E /* _DDFunctionEvaluator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDFunctionEvaluator.m; sourceTree = "<group>"; };
+		767D1E041A28987B006C0F6E /* _DDFunctionExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDFunctionExpression.h; sourceTree = "<group>"; };
+		767D1E051A28987B006C0F6E /* _DDFunctionExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDFunctionExpression.m; sourceTree = "<group>"; };
+		767D1E061A28987B006C0F6E /* _DDFunctionTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDFunctionTerm.h; sourceTree = "<group>"; };
+		767D1E071A28987B006C0F6E /* _DDFunctionTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDFunctionTerm.m; sourceTree = "<group>"; };
+		767D1E081A28987B006C0F6E /* _DDGroupTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDGroupTerm.h; sourceTree = "<group>"; };
+		767D1E091A28987B006C0F6E /* _DDGroupTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDGroupTerm.m; sourceTree = "<group>"; };
+		767D1E0A1A28987B006C0F6E /* _DDNumberExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDNumberExpression.h; sourceTree = "<group>"; };
+		767D1E0B1A28987B006C0F6E /* _DDNumberExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDNumberExpression.m; sourceTree = "<group>"; };
+		767D1E0C1A28987B006C0F6E /* _DDNumberTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDNumberTerm.h; sourceTree = "<group>"; };
+		767D1E0D1A28987B006C0F6E /* _DDNumberTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDNumberTerm.m; sourceTree = "<group>"; };
+		767D1E0E1A28987B006C0F6E /* _DDOperatorTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDOperatorTerm.h; sourceTree = "<group>"; };
+		767D1E0F1A28987B006C0F6E /* _DDOperatorTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDOperatorTerm.m; sourceTree = "<group>"; };
+		767D1E101A28987B006C0F6E /* _DDParserTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDParserTerm.h; sourceTree = "<group>"; };
+		767D1E111A28987B006C0F6E /* _DDParserTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDParserTerm.m; sourceTree = "<group>"; };
+		767D1E121A28987B006C0F6E /* _DDPrecisionFunctionEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDPrecisionFunctionEvaluator.h; sourceTree = "<group>"; };
+		767D1E131A28987B006C0F6E /* _DDPrecisionFunctionEvaluator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDPrecisionFunctionEvaluator.m; sourceTree = "<group>"; };
+		767D1E141A28987B006C0F6E /* _DDRewriteRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDRewriteRule.h; sourceTree = "<group>"; };
+		767D1E151A28987B006C0F6E /* _DDRewriteRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDRewriteRule.m; sourceTree = "<group>"; };
+		767D1E161A28987B006C0F6E /* _DDVariableExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDVariableExpression.h; sourceTree = "<group>"; };
+		767D1E171A28987B006C0F6E /* _DDVariableExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDVariableExpression.m; sourceTree = "<group>"; };
+		767D1E181A28987B006C0F6E /* _DDVariableTerm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _DDVariableTerm.h; sourceTree = "<group>"; };
+		767D1E191A28987B006C0F6E /* _DDVariableTerm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _DDVariableTerm.m; sourceTree = "<group>"; };
+		767D1E1A1A28987B006C0F6E /* DDExpression.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDExpression.h; sourceTree = "<group>"; };
+		767D1E1B1A28987B006C0F6E /* DDExpression.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDExpression.m; sourceTree = "<group>"; };
+		767D1E1C1A28987B006C0F6E /* DDExpressionRewriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDExpressionRewriter.h; sourceTree = "<group>"; };
+		767D1E1D1A28987B006C0F6E /* DDExpressionRewriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDExpressionRewriter.m; sourceTree = "<group>"; };
+		767D1E1E1A28987B006C0F6E /* DDMathEvaluator+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DDMathEvaluator+Private.h"; sourceTree = "<group>"; };
+		767D1E1F1A28987B006C0F6E /* DDMathEvaluator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMathEvaluator.h; sourceTree = "<group>"; };
+		767D1E201A28987B006C0F6E /* DDMathEvaluator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMathEvaluator.m; sourceTree = "<group>"; };
+		767D1E211A28987B006C0F6E /* DDMathOperator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMathOperator.h; sourceTree = "<group>"; };
+		767D1E221A28987B006C0F6E /* DDMathOperator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMathOperator.m; sourceTree = "<group>"; };
+		767D1E231A28987B006C0F6E /* DDMathOperator_Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMathOperator_Internal.h; sourceTree = "<group>"; };
+		767D1E241A28987B006C0F6E /* DDMathParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMathParser.h; sourceTree = "<group>"; };
+		767D1E251A28987B006C0F6E /* DDMathParserMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMathParserMacros.h; sourceTree = "<group>"; };
+		767D1E261A28987B006C0F6E /* DDMathStringToken.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMathStringToken.h; sourceTree = "<group>"; };
+		767D1E271A28987B006C0F6E /* DDMathStringToken.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMathStringToken.m; sourceTree = "<group>"; };
+		767D1E281A28987B006C0F6E /* DDMathStringTokenizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMathStringTokenizer.h; sourceTree = "<group>"; };
+		767D1E291A28987B006C0F6E /* DDMathStringTokenizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMathStringTokenizer.m; sourceTree = "<group>"; };
+		767D1E2A1A28987B006C0F6E /* DDParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDParser.h; sourceTree = "<group>"; };
+		767D1E2B1A28987B006C0F6E /* DDParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDParser.m; sourceTree = "<group>"; };
+		767D1E2C1A28987B006C0F6E /* DDParserTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDParserTypes.h; sourceTree = "<group>"; };
+		767D1E2D1A28987B006C0F6E /* DDParserTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDParserTypes.m; sourceTree = "<group>"; };
+		767D1E2E1A28987B006C0F6E /* DDTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTypes.h; sourceTree = "<group>"; };
+		767D1E2F1A28987B006C0F6E /* DDTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTypes.m; sourceTree = "<group>"; };
+		767D1E301A28987B006C0F6E /* NSString+DDMathParsing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDMathParsing.h"; sourceTree = "<group>"; };
+		767D1E311A28987B006C0F6E /* NSString+DDMathParsing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDMathParsing.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		767D1DC41A2897D7006C0F6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				767D1DCD1A2897D7006C0F6E /* CoreGraphics.framework in Frameworks */,
+				767D1DCF1A2897D7006C0F6E /* UIKit.framework in Frameworks */,
+				767D1DCB1A2897D7006C0F6E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		767D1DE51A2897D7006C0F6E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				767D1DEA1A2897D7006C0F6E /* XCTest.framework in Frameworks */,
+				767D1DEC1A2897D7006C0F6E /* UIKit.framework in Frameworks */,
+				767D1DEB1A2897D7006C0F6E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		767D1DBE1A2897D7006C0F6E = {
+			isa = PBXGroup;
+			children = (
+				767D1DFF1A28987B006C0F6E /* DDMathParser */,
+				767D1DD01A2897D7006C0F6E /* QWER */,
+				767D1DEF1A2897D7006C0F6E /* QWERTests */,
+				767D1DC91A2897D7006C0F6E /* Frameworks */,
+				767D1DC81A2897D7006C0F6E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		767D1DC81A2897D7006C0F6E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				767D1DC71A2897D7006C0F6E /* QWER.app */,
+				767D1DE81A2897D7006C0F6E /* QWERTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		767D1DC91A2897D7006C0F6E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				767D1DCA1A2897D7006C0F6E /* Foundation.framework */,
+				767D1DCC1A2897D7006C0F6E /* CoreGraphics.framework */,
+				767D1DCE1A2897D7006C0F6E /* UIKit.framework */,
+				767D1DE91A2897D7006C0F6E /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		767D1DD01A2897D7006C0F6E /* QWER */ = {
+			isa = PBXGroup;
+			children = (
+				767D1DD91A2897D7006C0F6E /* AppDelegate.h */,
+				767D1DDA1A2897D7006C0F6E /* AppDelegate.m */,
+				767D1DDC1A2897D7006C0F6E /* Main.storyboard */,
+				767D1DDF1A2897D7006C0F6E /* ViewController.h */,
+				767D1DE01A2897D7006C0F6E /* ViewController.m */,
+				767D1DE21A2897D7006C0F6E /* Images.xcassets */,
+				767D1DD11A2897D7006C0F6E /* Supporting Files */,
+			);
+			path = QWER;
+			sourceTree = "<group>";
+		};
+		767D1DD11A2897D7006C0F6E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				767D1DD21A2897D7006C0F6E /* QWER-Info.plist */,
+				767D1DD31A2897D7006C0F6E /* InfoPlist.strings */,
+				767D1DD61A2897D7006C0F6E /* main.m */,
+				767D1DD81A2897D7006C0F6E /* QWER-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		767D1DEF1A2897D7006C0F6E /* QWERTests */ = {
+			isa = PBXGroup;
+			children = (
+				767D1DF51A2897D7006C0F6E /* QWERTests.m */,
+				767D1DF01A2897D7006C0F6E /* Supporting Files */,
+			);
+			path = QWERTests;
+			sourceTree = "<group>";
+		};
+		767D1DF01A2897D7006C0F6E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				767D1DF11A2897D7006C0F6E /* QWERTests-Info.plist */,
+				767D1DF21A2897D7006C0F6E /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		767D1DFF1A28987B006C0F6E /* DDMathParser */ = {
+			isa = PBXGroup;
+			children = (
+				767D1E001A28987B006C0F6E /* _DDDecimalFunctions.h */,
+				767D1E011A28987B006C0F6E /* _DDDecimalFunctions.m */,
+				767D1E021A28987B006C0F6E /* _DDFunctionEvaluator.h */,
+				767D1E031A28987B006C0F6E /* _DDFunctionEvaluator.m */,
+				767D1E041A28987B006C0F6E /* _DDFunctionExpression.h */,
+				767D1E051A28987B006C0F6E /* _DDFunctionExpression.m */,
+				767D1E061A28987B006C0F6E /* _DDFunctionTerm.h */,
+				767D1E071A28987B006C0F6E /* _DDFunctionTerm.m */,
+				767D1E081A28987B006C0F6E /* _DDGroupTerm.h */,
+				767D1E091A28987B006C0F6E /* _DDGroupTerm.m */,
+				767D1E0A1A28987B006C0F6E /* _DDNumberExpression.h */,
+				767D1E0B1A28987B006C0F6E /* _DDNumberExpression.m */,
+				767D1E0C1A28987B006C0F6E /* _DDNumberTerm.h */,
+				767D1E0D1A28987B006C0F6E /* _DDNumberTerm.m */,
+				767D1E0E1A28987B006C0F6E /* _DDOperatorTerm.h */,
+				767D1E0F1A28987B006C0F6E /* _DDOperatorTerm.m */,
+				767D1E101A28987B006C0F6E /* _DDParserTerm.h */,
+				767D1E111A28987B006C0F6E /* _DDParserTerm.m */,
+				767D1E121A28987B006C0F6E /* _DDPrecisionFunctionEvaluator.h */,
+				767D1E131A28987B006C0F6E /* _DDPrecisionFunctionEvaluator.m */,
+				767D1E141A28987B006C0F6E /* _DDRewriteRule.h */,
+				767D1E151A28987B006C0F6E /* _DDRewriteRule.m */,
+				767D1E161A28987B006C0F6E /* _DDVariableExpression.h */,
+				767D1E171A28987B006C0F6E /* _DDVariableExpression.m */,
+				767D1E181A28987B006C0F6E /* _DDVariableTerm.h */,
+				767D1E191A28987B006C0F6E /* _DDVariableTerm.m */,
+				767D1E1A1A28987B006C0F6E /* DDExpression.h */,
+				767D1E1B1A28987B006C0F6E /* DDExpression.m */,
+				767D1E1C1A28987B006C0F6E /* DDExpressionRewriter.h */,
+				767D1E1D1A28987B006C0F6E /* DDExpressionRewriter.m */,
+				767D1E1E1A28987B006C0F6E /* DDMathEvaluator+Private.h */,
+				767D1E1F1A28987B006C0F6E /* DDMathEvaluator.h */,
+				767D1E201A28987B006C0F6E /* DDMathEvaluator.m */,
+				767D1E211A28987B006C0F6E /* DDMathOperator.h */,
+				767D1E221A28987B006C0F6E /* DDMathOperator.m */,
+				767D1E231A28987B006C0F6E /* DDMathOperator_Internal.h */,
+				767D1E241A28987B006C0F6E /* DDMathParser.h */,
+				767D1E251A28987B006C0F6E /* DDMathParserMacros.h */,
+				767D1E261A28987B006C0F6E /* DDMathStringToken.h */,
+				767D1E271A28987B006C0F6E /* DDMathStringToken.m */,
+				767D1E281A28987B006C0F6E /* DDMathStringTokenizer.h */,
+				767D1E291A28987B006C0F6E /* DDMathStringTokenizer.m */,
+				767D1E2A1A28987B006C0F6E /* DDParser.h */,
+				767D1E2B1A28987B006C0F6E /* DDParser.m */,
+				767D1E2C1A28987B006C0F6E /* DDParserTypes.h */,
+				767D1E2D1A28987B006C0F6E /* DDParserTypes.m */,
+				767D1E2E1A28987B006C0F6E /* DDTypes.h */,
+				767D1E2F1A28987B006C0F6E /* DDTypes.m */,
+				767D1E301A28987B006C0F6E /* NSString+DDMathParsing.h */,
+				767D1E311A28987B006C0F6E /* NSString+DDMathParsing.m */,
+			);
+			name = DDMathParser;
+			path = ../../DDMathParser;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		767D1DC61A2897D7006C0F6E /* QWER */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 767D1DF91A2897D7006C0F6E /* Build configuration list for PBXNativeTarget "QWER" */;
+			buildPhases = (
+				767D1DC31A2897D7006C0F6E /* Sources */,
+				767D1DC41A2897D7006C0F6E /* Frameworks */,
+				767D1DC51A2897D7006C0F6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QWER;
+			productName = QWER;
+			productReference = 767D1DC71A2897D7006C0F6E /* QWER.app */;
+			productType = "com.apple.product-type.application";
+		};
+		767D1DE71A2897D7006C0F6E /* QWERTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 767D1DFC1A2897D7006C0F6E /* Build configuration list for PBXNativeTarget "QWERTests" */;
+			buildPhases = (
+				767D1DE41A2897D7006C0F6E /* Sources */,
+				767D1DE51A2897D7006C0F6E /* Frameworks */,
+				767D1DE61A2897D7006C0F6E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				767D1DEE1A2897D7006C0F6E /* PBXTargetDependency */,
+			);
+			name = QWERTests;
+			productName = QWERTests;
+			productReference = 767D1DE81A2897D7006C0F6E /* QWERTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		767D1DBF1A2897D7006C0F6E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = Barninets;
+				TargetAttributes = {
+					767D1DE71A2897D7006C0F6E = {
+						TestTargetID = 767D1DC61A2897D7006C0F6E;
+					};
+				};
+			};
+			buildConfigurationList = 767D1DC21A2897D7006C0F6E /* Build configuration list for PBXProject "QWER" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 767D1DBE1A2897D7006C0F6E;
+			productRefGroup = 767D1DC81A2897D7006C0F6E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				767D1DC61A2897D7006C0F6E /* QWER */,
+				767D1DE71A2897D7006C0F6E /* QWERTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		767D1DC51A2897D7006C0F6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				767D1DE31A2897D7006C0F6E /* Images.xcassets in Resources */,
+				767D1DD51A2897D7006C0F6E /* InfoPlist.strings in Resources */,
+				767D1DDE1A2897D7006C0F6E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		767D1DE61A2897D7006C0F6E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				767D1DF41A2897D7006C0F6E /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		767D1DC31A2897D7006C0F6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				767D1E381A28987B006C0F6E /* _DDNumberTerm.m in Sources */,
+				767D1E3E1A28987B006C0F6E /* _DDVariableTerm.m in Sources */,
+				767D1E351A28987B006C0F6E /* _DDFunctionTerm.m in Sources */,
+				767D1E3A1A28987B006C0F6E /* _DDParserTerm.m in Sources */,
+				767D1E461A28987B006C0F6E /* DDParserTypes.m in Sources */,
+				767D1E441A28987B006C0F6E /* DDMathStringTokenizer.m in Sources */,
+				767D1E481A28987B006C0F6E /* NSString+DDMathParsing.m in Sources */,
+				767D1DE11A2897D7006C0F6E /* ViewController.m in Sources */,
+				767D1E3F1A28987B006C0F6E /* DDExpression.m in Sources */,
+				767D1E341A28987B006C0F6E /* _DDFunctionExpression.m in Sources */,
+				767D1E391A28987B006C0F6E /* _DDOperatorTerm.m in Sources */,
+				767D1E411A28987B006C0F6E /* DDMathEvaluator.m in Sources */,
+				767D1E421A28987B006C0F6E /* DDMathOperator.m in Sources */,
+				767D1E431A28987B006C0F6E /* DDMathStringToken.m in Sources */,
+				767D1DDB1A2897D7006C0F6E /* AppDelegate.m in Sources */,
+				767D1E401A28987B006C0F6E /* DDExpressionRewriter.m in Sources */,
+				767D1E3B1A28987B006C0F6E /* _DDPrecisionFunctionEvaluator.m in Sources */,
+				767D1E471A28987B006C0F6E /* DDTypes.m in Sources */,
+				767D1E331A28987B006C0F6E /* _DDFunctionEvaluator.m in Sources */,
+				767D1E361A28987B006C0F6E /* _DDGroupTerm.m in Sources */,
+				767D1E371A28987B006C0F6E /* _DDNumberExpression.m in Sources */,
+				767D1DD71A2897D7006C0F6E /* main.m in Sources */,
+				767D1E451A28987B006C0F6E /* DDParser.m in Sources */,
+				767D1E3D1A28987B006C0F6E /* _DDVariableExpression.m in Sources */,
+				767D1E3C1A28987B006C0F6E /* _DDRewriteRule.m in Sources */,
+				767D1E321A28987B006C0F6E /* _DDDecimalFunctions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		767D1DE41A2897D7006C0F6E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				767D1DF61A2897D7006C0F6E /* QWERTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		767D1DEE1A2897D7006C0F6E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 767D1DC61A2897D7006C0F6E /* QWER */;
+			targetProxy = 767D1DED1A2897D7006C0F6E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		767D1DD31A2897D7006C0F6E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				767D1DD41A2897D7006C0F6E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		767D1DDC1A2897D7006C0F6E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				767D1DDD1A2897D7006C0F6E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		767D1DF21A2897D7006C0F6E /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				767D1DF31A2897D7006C0F6E /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		767D1DF71A2897D7006C0F6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		767D1DF81A2897D7006C0F6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		767D1DFA1A2897D7006C0F6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QWER/QWER-Prefix.pch";
+				INFOPLIST_FILE = "QWER/QWER-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		767D1DFB1A2897D7006C0F6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QWER/QWER-Prefix.pch";
+				INFOPLIST_FILE = "QWER/QWER-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		767D1DFD1A2897D7006C0F6E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/QWER.app/QWER";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QWER/QWER-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "QWERTests/QWERTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		767D1DFE1A2897D7006C0F6E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/QWER.app/QWER";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "QWER/QWER-Prefix.pch";
+				INFOPLIST_FILE = "QWERTests/QWERTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		767D1DC21A2897D7006C0F6E /* Build configuration list for PBXProject "QWER" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				767D1DF71A2897D7006C0F6E /* Debug */,
+				767D1DF81A2897D7006C0F6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		767D1DF91A2897D7006C0F6E /* Build configuration list for PBXNativeTarget "QWER" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				767D1DFA1A2897D7006C0F6E /* Debug */,
+				767D1DFB1A2897D7006C0F6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		767D1DFC1A2897D7006C0F6E /* Build configuration list for PBXNativeTarget "QWERTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				767D1DFD1A2897D7006C0F6E /* Debug */,
+				767D1DFE1A2897D7006C0F6E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 767D1DBF1A2897D7006C0F6E /* Project object */;
+}
