@@ -17,7 +17,7 @@
                BlueprintIdentifier = "45245AAE1A20DFA700845904"
                BuildableName = "AOCalculator.app"
                BlueprintName = "AOCalculator"
-               ReferencedContainer = "container:aocalculator.xcodeproj">
+               ReferencedContainer = "container:RPLCalculator.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "45245AD21A20DFA700845904"
                BuildableName = "AOCalculatorTests.xctest"
                BlueprintName = "AOCalculatorTests"
-               ReferencedContainer = "container:aocalculator.xcodeproj">
+               ReferencedContainer = "container:RPLCalculator.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -45,7 +45,7 @@
             BlueprintIdentifier = "45245AAE1A20DFA700845904"
             BuildableName = "AOCalculator.app"
             BlueprintName = "AOCalculator"
-            ReferencedContainer = "container:aocalculator.xcodeproj">
+            ReferencedContainer = "container:RPLCalculator.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -64,7 +64,7 @@
             BlueprintIdentifier = "45245AAE1A20DFA700845904"
             BuildableName = "AOCalculator.app"
             BlueprintName = "AOCalculator"
-            ReferencedContainer = "container:aocalculator.xcodeproj">
+            ReferencedContainer = "container:RPLCalculator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -82,7 +82,7 @@
             BlueprintIdentifier = "45245AAE1A20DFA700845904"
             BuildableName = "AOCalculator.app"
             BlueprintName = "AOCalculator"
-            ReferencedContainer = "container:aocalculator.xcodeproj">
+            ReferencedContainer = "container:RPLCalculator.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

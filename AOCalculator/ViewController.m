@@ -21,8 +21,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.inputDisplay.text  = @"";
     self.outputDisplay.text = @"";
-    _calculator = [[RPNCalculator alloc] init];
-   
+    _calculator = [[RPNCalculator alloc] init];    
 }
 
 - (void)didReceiveMemoryWarning{

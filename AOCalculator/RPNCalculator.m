@@ -29,7 +29,7 @@
 
 -(BOOL)isOperator:(unichar)character{
     BOOL result = NO;
-    NSString* str = @"-+*/^()";
+    NSString* str = @"-+*/^()!";
     for (NSInteger i = 0; i  < [str length]; i++) {
         if(character == [str characterAtIndex:i]){
             result = YES;
@@ -39,6 +39,14 @@
     return result;
 }
 
+-(BOOL)isUnaryMinusForInput:(NSString*)input atIndex:(NSInteger)index{
+    BOOL result = NO;
+    
+    if( (([input characterAtIndex:index] == '-') && !index) || (([input characterAtIndex:index] == '-') && ([self isOperator:[input characterAtIndex:index -1]]))){
+        result = YES;
+    }
+    return result;
+}
 
 -(BOOL)isDigit:(unichar)character{
     NSString* str = [NSString stringWithCharacters:&character length:1];
@@ -60,8 +68,9 @@
         case '-': return 3;
         case '*': return 4;
         case '/': return 4;
-        case '^': return 5;
-        default : return 6;
+        case '!' :return 5;
+        case '^': return 6;
+        default : return 7;
     }
 }
 
@@ -89,6 +98,13 @@
         }
         
         if([self isOperator:[input characterAtIndex:i]]){
+            
+            unichar c = [input characterAtIndex:i];
+            
+            if([self isUnaryMinusForInput:input atIndex:i]){
+                c = '!';
+            }
+            
             if([input characterAtIndex:i] == '('){
                 unichar c =[input characterAtIndex:i];
                 NSString* str = [NSString stringWithCharacters:&c length:1];
@@ -105,13 +121,13 @@
             }
             else{
                 if([stack count]){
-                    if([self GetPriority:[input characterAtIndex:i]]
+                    if([self GetPriority:c]
                     <= [self GetPriority:[[stack peekObject] characterAtIndex:0]]){
                         [output appendString:[stack popObject]];
                         [output appendString:@" "];
                     }
                 }
-                unichar c =[input characterAtIndex:i];
+               
                 NSString* str = [NSString stringWithCharacters:&c length:1];
                 [stack pushObject:str];
             }
@@ -134,10 +150,13 @@
     Stack* stack = [[Stack alloc] init];
     
     for (NSInteger i = 0; i < [input length]; i++) {
+        NSMutableString* str = [NSMutableString string];
         
+       /* if([input characterAtIndex:i] == '!'){
+            [str appendString:@"-"];
+            i++;
+        }*/
         if([self isDigit:[input characterAtIndex:i]]){
-            
-            NSMutableString* str = [NSMutableString string];
             
             while (![self isDelimiter:[input characterAtIndex:i]]
                 && ![self isOperator:[input characterAtIndex:i]]) {
@@ -156,6 +175,9 @@
             double b = [[stack popObject] doubleValue];
             
             switch ([input characterAtIndex:i]) {
+                case '!': result = -a;
+                    [stack pushObject:[NSNumber numberWithDouble:b]];
+                    break;
                 case '+': result = b + a;
                     break;
                 case '-': result = b - a;
