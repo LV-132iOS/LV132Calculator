@@ -1,4 +1,4 @@
 LV132Calculator
 ===============
 
-Best Calculator in the whole World!
+The Best Calculator in The Whole World!
