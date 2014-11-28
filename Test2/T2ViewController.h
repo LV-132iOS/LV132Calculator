@@ -13,7 +13,7 @@
 
 @property (strong, nonatomic) IBOutlet UITextField *textf;
 @property (strong, nonatomic) IBOutlet UILabel *lab;
-@property (strong, nonatomic) IBOutlet UILabel *TestLabel;
+
 
 @property (nonatomic) BOOL DivadeZero;
 

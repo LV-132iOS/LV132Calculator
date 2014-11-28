@@ -14,20 +14,13 @@
 
 @property (strong, nonatomic) NSString * InputString;
 
-
 @property (nonatomic) BOOL isDot;
-@property (nonatomic) BOOL isDot2;
-
-@property (nonatomic) BOOL isZero;
-@property (nonatomic) BOOL isOperation;
-@property (nonatomic) BOOL isDecimal;
-
-//@property (nonatomic) NSInteger * NumberOfGaps;
 
 @end
 
 @implementation T2ViewController
 
+NSInteger NumberOfGaps;
 
 @synthesize OutputString,InputString,textf,lab;
 
@@ -43,93 +36,102 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (IBAction)GoleftClick:(id)sender {
-}
-
-
 - (IBAction)DigitAction:(id)sender {
+    
+    if([textf.text characterAtIndex:([textf.text length]-1)]=='0'){
+        textf.text= [textf.text substringToIndex:[textf.text length]-1];
+        NSInteger I1 = self.IsBool;
+        if((I1==1)||(I1==0)||(I1==4))textf.text= [textf.text stringByAppendingString:@"0"];
+    }
+    
     NSInteger I = self.IsBool;
+    
     if(I!=6)
     textf.text= [textf.text stringByAppendingString: [sender currentTitle]];
-     _isDot = TRUE;
-    
-    _isZero = TRUE;
-    _isOperation=TRUE;
-   
     
 }
 - (IBAction)MinosOperation:(id)sender {
     NSInteger I = self.IsBool;
     
-    if((I==1)||(I==0)||(I==6)||(I==5)||(I==7))textf.text= [textf.text stringByAppendingString: [sender currentTitle]];
-    _isZero = FALSE;
-    _isOperation=FALSE;
-    _isDot =FALSE;
+    if((I==1)||(I==0)||(I==6)||(I==5)||(I==7)){
+        textf.text= [textf.text stringByAppendingString: [sender currentTitle]];
+        _isDot =TRUE;
+    }
 }
 - (IBAction)OperationAction:(id)sender {
     
     NSInteger I = self.IsBool;
     
-    if((I==1)||(I==0)||(I==6))textf.text= [textf.text stringByAppendingString: [sender currentTitle]];
-    _isZero = FALSE;
-    _isOperation=FALSE;
-    _isDot =FALSE;
-
+    if((I==1)||(I==0)||(I==6)){
+        textf.text= [textf.text stringByAppendingString: [sender currentTitle]];
+        _isDot =TRUE;
+    }
 }
 - (IBAction)ZeroButtonClick:(id)sender {
     
-    /*if(_isZero)*/
-    textf.text= [textf.text stringByAppendingString: [sender currentTitle]];
-    _isDot =TRUE;
+    if([textf.text characterAtIndex:([textf.text length]-1)]=='0'){
+        textf.text= [textf.text substringToIndex:[textf.text length]-1];
+        NSInteger I1 = self.IsBool;
+        if((I1==1)||(I1==0)||(I1==4))textf.text= [textf.text stringByAppendingString:@"0"];
+    }
+        
+    NSInteger I = self.IsBool;
     
-    _isOperation=TRUE;
-    
+    if(I!=6)textf.text= [textf.text stringByAppendingString: [sender currentTitle]];
     
 }
 - (IBAction)DotButtonClick:(id)sender {
     
     NSInteger I = self.IsBool;
-    if((I==1)||(I==0))
-    textf.text= [textf.text stringByAppendingString: [sender currentTitle]];
-    _isDot=FALSE;
-    //_isOperation=FALSE;
+    if(((I==1)||(I==0))&&(_isDot)){
+        textf.text= [textf.text stringByAppendingString: [sender currentTitle]];
+        _isDot=FALSE;
+    }
     
 }
 - (IBAction)LsftScopeClick:(id)sender {
-    
-    textf.text= [textf.text stringByAppendingString: [sender currentTitle]];
-    _isZero = FALSE;
-    _isDot =FALSE;
-    _isOperation=FALSE;
+    NSInteger I = self.IsBool;
+    if((I==2)||(I==3)||(I==7)||(I==5)){
+        textf.text= [textf.text stringByAppendingString: [sender currentTitle]];
+        NumberOfGaps++;
+        _isDot =TRUE;
+    }
     
 }
 - (IBAction)RightScopeClick:(id)sender {
-    
-    textf.text= [textf.text stringByAppendingString: [sender currentTitle]];
-    _isZero = FALSE;
-    _isDot =FALSE;
-    _isOperation=TRUE;
-    
+    NSInteger I = self.IsBool;
+    if(((I==1)||(I==0)||(I==6))&&(NumberOfGaps>0)){
+        textf.text= [textf.text stringByAppendingString: [sender currentTitle]];
+        NumberOfGaps--;
+        _isDot =TRUE;
+    }
+   
 }
 - (IBAction)NewClick:(id)sender {
     textf.text=@"";
-    _isZero = FALSE;
     _isDot =FALSE;
     
 }
 - (IBAction)CanselClick:(id)sender {
-    if(textf.text.length!=0)textf.text= [textf.text substringToIndex:[textf.text length]-1];
-    _isZero = FALSE;
     
+    if([textf.text characterAtIndex: (textf.text.length  -1)]=='(' )NumberOfGaps--;
+    if([textf.text characterAtIndex: (textf.text.length  -1)]==')' )NumberOfGaps++;
+    if([textf.text characterAtIndex: (textf.text.length  -1)]=='.' )_isDot=TRUE;
+    
+    if(textf.text.length!=0)textf.text= [textf.text substringToIndex:[textf.text length]-1];
     
 }
 
 -(NSInteger)IsBool{
     NSString *STR=textf.text;
-    NSInteger I=0,I1=0;
+    NSInteger I=0;
     NSInteger Last = STR.length-1;
-    //if(STR==@"")
-    if(STR.length==0)return 7;
+  
+    if(STR.length==0){
+        _isDot=TRUE;
+        NumberOfGaps=0;
+        return 7;
+    }
     switch ([STR characterAtIndex:Last]) {
         case '+':
             I=2;
@@ -189,24 +191,26 @@
     return I;
 }
 
-
 - (IBAction)calculate:(id)sender {
     
-    [self setInputString:textf.text];
+    if(NumberOfGaps==0){
+        if(textf.text.length!=0)[self setInputString:textf.text];
+        else setInputString:textf.text = @"0";
+        
+        [self setOutputString:self.InputString];
     
-    [self setOutputString:self.InputString];
+        _DivadeZero = TRUE;
     
-    _DivadeZero = TRUE;
+        double d=0.0;
     
-    double d=0.0;
+        d=[self Equation:InputString];
     
-    d=[self Equation:InputString];
+        OutputString = [NSString stringWithFormat:@"%f",d];
     
-    OutputString = [NSString stringWithFormat:@"%f",d];
-    
-    if(_DivadeZero==FALSE)OutputString=@"DIVADE TO 0";
-    
-    lab.text = OutputString;
+        if(_DivadeZero==FALSE)OutputString=@"DIVADE TO 0";
+        
+        lab.text = OutputString;
+    }
    
 }
 -(double)Multiplier:(NSString *)STR{
