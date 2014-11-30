@@ -4,12 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AOCalculator 2.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>AOCalculator.xcscheme</key>
+		<key>Test2.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -17,12 +12,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>45245AAE1A20DFA700845904</key>
+		<key>F062F1701A25EF6E006F8818</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>45245AD21A20DFA700845904</key>
+		<key>F062F1911A25EF6E006F8818</key>
 		<dict>
 			<key>primary</key>
 			<true/>

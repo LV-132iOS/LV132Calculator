@@ -4,20 +4,6 @@
    version = "2.0">
    <Breakpoints>
       <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "AOCalculator/ViewController.m"
-            timestampString = "438989842.758597"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "158"
-            endingLineNumber = "158">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.ExceptionBreakpoint">
          <BreakpointContent
             shouldBeEnabled = "Yes"
@@ -33,13 +19,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "AOCalculator/RPNCalculator.m"
-            timestampString = "438991193.477349"
+            filePath = "Test2/T2ViewController.m"
+            timestampString = "438990231.768562"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "18"
-            endingLineNumber = "18"
-            landmarkName = "-Calculate:"
+            startingLineNumber = "314"
+            endingLineNumber = "314"
+            landmarkName = "-IsStringDouble:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

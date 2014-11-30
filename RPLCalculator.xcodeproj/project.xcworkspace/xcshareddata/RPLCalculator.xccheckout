@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1C730AF6-6E90-49A9-90F0-4FE8D72B4C24</string>
+	<key>IDESourceControlProjectName</key>
+	<string>RPLCalculator</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>49FF8A9A5AB0B0085451804D915FBF5DC14142AB</key>
+		<string>https://github.com/LV-132iOS/LV132Calculator.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>RPLCalculator.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>49FF8A9A5AB0B0085451804D915FBF5DC14142AB</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/LV-132iOS/LV132Calculator.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>49FF8A9A5AB0B0085451804D915FBF5DC14142AB</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>49FF8A9A5AB0B0085451804D915FBF5DC14142AB</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LV132Calculator</string>
+		</dict>
+	</array>
+</dict>
+</plist>

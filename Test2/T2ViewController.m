@@ -313,14 +313,15 @@ NSInteger NumberOfGaps;
 -(BOOL)IsStringDouble:(NSString *)STR{
 
     NSInteger I1=0;
-    if([STR characterAtIndex: I1]=='-')I1++;
-    for(NSInteger I=I1;I<STR.length;I++){
-        unichar c =[STR characterAtIndex: I];
-        if((c!='.')&&((c<'0')||(c>'9'))){
-            return FALSE;
+    if([STR length]){
+        if([STR characterAtIndex: I1]=='-')I1++;
+        for(NSInteger I=I1;I<STR.length;I++){
+            unichar c =[STR characterAtIndex: I];
+            if((c!='.')&&((c<'0')||(c>'9'))){
+                return FALSE;
+            }
         }
     }
-   
     return TRUE;
 }
 

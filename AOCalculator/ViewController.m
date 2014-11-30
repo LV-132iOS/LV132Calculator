@@ -82,7 +82,9 @@
             NSRange range;
             range.location = [buffer length]-1;
             range.length = 1;
-            [buffer deleteCharactersInRange:range];
+            if([buffer length]){
+                [buffer deleteCharactersInRange:range];
+            }
             NSLog(@"%@", buffer);
             break;
         case 15:
