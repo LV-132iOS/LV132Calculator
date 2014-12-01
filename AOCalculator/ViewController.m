@@ -11,14 +11,19 @@
 \((?:\d+(?:[\+\*\-\/]\d+)*[\+\*\-\/]\d+)+\)
  Любые бинарные операции внутри скобок
  
-^[\+\*\/\^]|[\+\-\*\/\^][\+\-\*\/\^]+
+^[\\+\\*\\/\\^]|[\\+\\-\\*\\/\\^][\\+\\-\\*\\/\\^]+
+
  
 Две операции подряд или одна операция в начале строки за исключением унарного минуса
  
-\d+\.\.+|\d+\.[\+\-\*\/\^]+|\d+\.$
- Две точки или точка и операция или точка в конце выражения
+\d+\\.\\.+|\d+\\.[\\+\\-\\*\\/\\^]+|\d+\\.$|\d+\\.\d+\\.+
+ Две точки или точка и операция или точка в конце выражения или точка число точка
  
- [\+\-\*\/\^]$
+ ^\.
+ Точка в начале
+ 
+ [\\+\\-\\*\\/\\^]$
+
  Операция в конце выражения
  */
 
@@ -36,10 +41,10 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     self.inputDisplay.text  = @"";
     self.outputDisplay.text = @"";
     _calculator = [[RPNCalculator alloc] init];
+<<<<<<< HEAD
     
     
     NSMutableString* str = @"2++";
@@ -62,89 +67,95 @@
   
     NSLog(@"%@",str);
     
+=======
+>>>>>>> db3c11486def7adcda0aa8a1beb0d03c86adacce
 }
 
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
 
 - (IBAction)inputCallback:(id)sender {
     NSInteger tag = [sender tag];
-    NSMutableString* buffer = [NSMutableString stringWithString:_inputDisplay.text];
-    NSMutableString* ms = [NSMutableString stringWithString:[self.inputDisplay.text mutableCopy]];
+    NSMutableAttributedString* attributedString = [[NSMutableAttributedString alloc] initWithString:_inputDisplay.text];
     NSNumber* num = [[NSNumber alloc] init];
+    
     switch (tag) {
         case 0:
-            [buffer appendString: @"0" ];
+            [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"0" ]];
             break;
         case 1:
-           [buffer appendString: @"1" ];
+             [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"1" ]];
             break;
         case 2:
-            [buffer appendString: @"2" ];
+             [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"2" ]];
             break;
         case 3:
-            [buffer appendString: @"3" ];
+             [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"3" ]];
             break;
         case 4:
-           [buffer appendString: @"4" ];
+             [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"4" ]];
             break;
         case 5:
-            [buffer appendString: @"5" ];
+             [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"5" ]];
             break;
         case 6:
-            [buffer appendString: @"6" ];
+             [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"6" ]];
             break;
         case 7:
-           [buffer appendString: @"7" ];
+             [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"7" ]];
             break;
         case 8:
-            [buffer appendString: @"8" ];
+             [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"8" ]];
             break;
         case 9:
-            [buffer appendString: @"9" ];
+             [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"9" ]];
             break;
         case 10:
-            [buffer appendString: @"+" ];
+             [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"+" ]];
             break;
         case 11:
-            [buffer appendString: @"-" ];
+             [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"-" ]];
             break;
         case 12:
-            [buffer appendString: @"/" ];
+             [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"/" ]];
             break;
         case 13:
-            [buffer appendString: @"*" ];
+             [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"*" ]];
             break;
         case 14:
             NSLog(@"%ld", (long)tag);
             NSRange range;
-            range.location = [buffer length]-1;
+            range.location = [attributedString length]-1;
             range.length = 1;
+<<<<<<< HEAD
             if([buffer length]){
                 [buffer deleteCharactersInRange:range];
             }
             NSLog(@"%@", buffer);
+=======
+            if([attributedString length]) [attributedString deleteCharactersInRange:range];
+>>>>>>> db3c11486def7adcda0aa8a1beb0d03c86adacce
             break;
         case 15:
             NSLog(@"%ld", (long)tag);
-            num = [_calculator Calculate:ms];
-            self.outputDisplay.text = [NSString stringWithFormat:@"%@",  num];
-            _inputDisplay.text = @"";
+            if([self ValidateString:attributedString]){
+                num = [_calculator Calculate:[attributedString.string mutableCopy]];
+                self.outputDisplay.text = [NSString stringWithFormat:@"%@",  num];
+                _inputDisplay.text = @"";
+            }        
             return;
         case 16:
-             [buffer appendString: @"(" ];
+             [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"(" ]];
             break;
         case 17:
-            [buffer appendString: @")" ];
+             [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@")" ]];
             break;
         case 18:
-            [buffer appendString: @"^" ];
+             [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"^" ]];
             break;
         case 19:
-            [buffer appendString: @"." ];
+             [attributedString appendAttributedString:[[NSAttributedString alloc] initWithString:@"." ]];
             break;
         case 20:
             self.inputDisplay.text = @"";
@@ -153,9 +164,107 @@
         default:
             break;
     }
-    self.inputDisplay.text = buffer;
     
     
+    
+    attributedString = [self ValidateString:attributedString];
+ 
+    self.inputDisplay.attributedText = attributedString;
+}
+
+-(NSMutableAttributedString*)ValidateString: (NSMutableAttributedString*)attributedString{
+    BOOL result = NO;
+    
+    NSString* patternForOperators = @"[\\+\\-\\*\\/\\^][\\+\\-\\*\\/\\^\\.]+|\\d+[\\(]|[\\)]\\d|^00+|[\\+\\-\\*\\/\\^]00+";
+    NSString* patternForOperatorAtStart = @"^[\\+\\*\\/\\^]|\\([\\+\\*\\/\\^]";
+    NSString* patternForOperatorAtTheEnd = @"[\\+\\-\\*\\/\\^]$";
+    NSString* patternForDots = @"\\d+\\.\\.+|\\d+\\.[\\+\\-\\*\\/\\^\\)\\(]+|\\d+\\.\\d+\\.+|[\\+\\-\\*\\/\\^\\)\\(]\\.";
+    NSString* patternForDotAtStart = @"^\\.";
+    NSString* patternForDotAtEnd = @"\\d+\\.$";
+    NSString* patternForParenthesis = @"\\(\\d+\\)|[\\+\\-\\*\\/\\^]\\)|\\(\\)|\\)\\(";
+    
+    NSError* error = nil;
+    
+    NSRegularExpression* validateOperators = [NSRegularExpression regularExpressionWithPattern:patternForOperators options:0 error:&error];
+    NSRegularExpression* validateDots      = [NSRegularExpression regularExpressionWithPattern:patternForDots options:0 error:&error];
+    NSRegularExpression* validateParenthesis    = [NSRegularExpression regularExpressionWithPattern:patternForParenthesis options:0 error:&error];
+    
+    NSRegularExpression* replaceDotAtStart = [NSRegularExpression regularExpressionWithPattern:patternForDotAtStart options:0 error:&error];
+    NSRegularExpression* replaceOperatorAtStart = [NSRegularExpression regularExpressionWithPattern:patternForOperatorAtStart options:0 error:&error];
+    
+    NSRegularExpression* highlightDotAtTheEnd = [NSRegularExpression regularExpressionWithPattern:patternForDotAtEnd options:0 error:&error];
+    NSRegularExpression* highlightOperatorAtTheEnd = [NSRegularExpression regularExpressionWithPattern:patternForOperatorAtTheEnd options:0 error:&error];
+    
+
+    
+    //========CHECK OTHER INPUT=======
+    if([validateOperators numberOfMatchesInString:attributedString.string options:0 range:NSMakeRange(0, [attributedString length])]){
+        NSLog(@"validateOperators!");
+        [attributedString deleteCharactersInRange:NSMakeRange([attributedString length]-1, 1)];
+        
+        result = YES;
+    }
+    
+    if([validateDots numberOfMatchesInString:attributedString.string options:0 range:NSMakeRange(0, [attributedString length])]){
+        NSLog(@"validateDots!");
+        [attributedString deleteCharactersInRange:NSMakeRange([attributedString length]-1, 1)];
+        
+        result = YES;
+    }
+    
+    if([validateParenthesis numberOfMatchesInString:attributedString.string options:0 range:NSMakeRange(0, [attributedString length])]){
+        NSLog(@"validateDots!");
+        [attributedString deleteCharactersInRange:NSMakeRange([attributedString length]-1, 1)];
+        
+        result = YES;
+    }
+    if([highlightDotAtTheEnd numberOfMatchesInString:attributedString.string options:0 range:NSMakeRange(0,[attributedString length])]){
+        NSLog(@"highlightDotAtTheEnd!");
+        [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange([attributedString length]-1, 1)];
+        
+        result = YES;
+    }
+    
+    if([replaceDotAtStart numberOfMatchesInString:attributedString.string options:0 range:NSMakeRange(0, [attributedString length])]){
+        NSLog(@"replaceDotAtStart!");
+        [attributedString insertAttributedString:[[NSAttributedString alloc] initWithString:@"0"] atIndex:0];
+        [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange([attributedString length]-1, 1)];
+    
+        result = YES;
+    }
+    
+    if([replaceOperatorAtStart numberOfMatchesInString:attributedString.string options:0 range:NSMakeRange(0, [attributedString length])]){
+        NSLog(@"replaceOperatorAtStart!");
+        [attributedString deleteCharactersInRange:NSMakeRange([attributedString length]-1, 1)];
+        result = YES;
+    }
+    
+    if([highlightOperatorAtTheEnd numberOfMatchesInString:attributedString.string options:0 range:NSMakeRange(0, [attributedString length])]){
+        NSLog(@"highlightOperatorAtTheEnd!");
+        [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange([attributedString length]-1, 1)];
+        result = YES;
+    }
+    
+    //=========CHECK FOR PARENTHESIS BALANCE=======
+    NSInteger openParenthesisCounter = 0;
+    NSInteger closedParenthesisCounter = 0;
+    NSInteger lastOpenedParenthesisIndex = 0;
+    
+    for(NSInteger i = 0; i < [attributedString length]; i++){
+        if([attributedString.string characterAtIndex:i] == '('){
+            openParenthesisCounter++;
+            lastOpenedParenthesisIndex = i;
+        }
+        if([attributedString.string characterAtIndex:i] == ')') closedParenthesisCounter++;
+    }
+    if(openParenthesisCounter>closedParenthesisCounter){
+        [attributedString addAttribute:NSForegroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(lastOpenedParenthesisIndex, 1)];
+    }
+    else if(openParenthesisCounter<closedParenthesisCounter){
+        [attributedString deleteCharactersInRange:NSMakeRange([attributedString length]-1, 1)];
+    }
+    
+    return  attributedString;
 }
 
 @end
