@@ -6,6 +6,24 @@
 //  Copyright (c) 2014 Alex Ozun. All rights reserved.
 //
 
+
+/*
+\((?:\d+(?:[\+\*\-\/]\d+)*[\+\*\-\/]\d+)+\)
+ Любые бинарные операции внутри скобок
+ 
+^[\+\*\/\^]|[\+\-\*\/\^][\+\-\*\/\^]+
+ 
+Две операции подряд или одна операция в начале строки за исключением унарного минуса
+ 
+\d+\.\.+|\d+\.[\+\-\*\/\^]+|\d+\.$
+ Две точки или точка и операция или точка в конце выражения
+ 
+ [\+\-\*\/\^]$
+ Операция в конце выражения
+ */
+
+
+
 #import "ViewController.h"
 
 
@@ -21,13 +39,36 @@
 	// Do any additional setup after loading the view, typically from a nib.
     self.inputDisplay.text  = @"";
     self.outputDisplay.text = @"";
-    _calculator = [[RPNCalculator alloc] init];    
+    _calculator = [[RPNCalculator alloc] init];
+    
+    
+    NSMutableString* str = @"2++";
+    NSMutableString* replacementString = [NSMutableString stringWithString:str];
+    [replacementString deleteCharactersInRange:NSMakeRange([replacementString length]-2, 1)];
+    
+    NSString* pattern = @"^[\\+\\*\\/\\^]|[\\+\\-\\*\\/\\^][\\+\\-\\*\\/\\^]+";
+    NSError *error = nil;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:pattern options:NSRegularExpressionCaseInsensitive error:&error];
+
+    NSRange textRange = NSMakeRange(0, str.length);
+    
+ 
+    
+    [regex replaceMatchesInString:str
+                          options:NSMatchingReportCompletion
+                            range:textRange
+                     withTemplate:[NSString stringWithCharacters:(const unichar*)[str characterAtIndex:[str length]-2] length:1 ]];
+    
+  
+    NSLog(@"%@",str);
+    
 }
 
 - (void)didReceiveMemoryWarning{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 - (IBAction)inputCallback:(id)sender {
     NSInteger tag = [sender tag];
