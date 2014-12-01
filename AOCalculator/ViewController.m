@@ -103,7 +103,7 @@
             NSRange range;
             range.location = [attributedString length]-1;
             range.length = 1;
-            [attributedString deleteCharactersInRange:range];
+            if([attributedString length]) [attributedString deleteCharactersInRange:range];
             break;
         case 15:
             NSLog(@"%ld", (long)tag);
@@ -143,10 +143,10 @@
 -(NSMutableAttributedString*)ValidateString: (NSMutableAttributedString*)attributedString{
     BOOL result = NO;
     
-    NSString* patternForOperators = @"[\\+\\-\\*\\/\\^][\\+\\-\\*\\/\\^\\.]+|\\d+[\\(]|[\\)]\\d";
+    NSString* patternForOperators = @"[\\+\\-\\*\\/\\^][\\+\\-\\*\\/\\^\\.]+|\\d+[\\(]|[\\)]\\d|^00+|[\\+\\-\\*\\/\\^]00+";
     NSString* patternForOperatorAtStart = @"^[\\+\\*\\/\\^]|\\([\\+\\*\\/\\^]";
     NSString* patternForOperatorAtTheEnd = @"[\\+\\-\\*\\/\\^]$";
-    NSString* patternForDots = @"\\d+\\.\\.+|\\d+\\.[\\+\\-\\*\\/\\^\\)\\(]+|\\d+\\.\\d+\\.+";
+    NSString* patternForDots = @"\\d+\\.\\.+|\\d+\\.[\\+\\-\\*\\/\\^\\)\\(]+|\\d+\\.\\d+\\.+|[\\+\\-\\*\\/\\^\\)\\(]\\.";
     NSString* patternForDotAtStart = @"^\\.";
     NSString* patternForDotAtEnd = @"\\d+\\.$";
     NSString* patternForParenthesis = @"\\(\\d+\\)|[\\+\\-\\*\\/\\^]\\)|\\(\\)|\\)\\(";
