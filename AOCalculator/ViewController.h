@@ -15,6 +15,6 @@
 @property (weak, nonatomic) IBOutlet OutputDisplay *outputDisplay;
 @property (weak, nonatomic) IBOutlet InputDisplay *inputDisplay;
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *inputButton;
-@property (strong, nonatomic) RPNCalculator* calculator;
+
 
 @end

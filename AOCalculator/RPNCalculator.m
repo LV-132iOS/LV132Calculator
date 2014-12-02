@@ -42,7 +42,7 @@
 -(BOOL)isUnaryMinusForInput:(NSString*)input atIndex:(NSInteger)index{
     BOOL result = NO;
     
-    if( (([input characterAtIndex:index] == '-') && !index) || (([input characterAtIndex:index] == '-') && ([self isOperator:[input characterAtIndex:index -1]]))){
+    if( (([input characterAtIndex:index] == '-') && !index) || (([input characterAtIndex:index] == '-') && ([input characterAtIndex:index -1] == '('))){
         result = YES;
     }
     return result;

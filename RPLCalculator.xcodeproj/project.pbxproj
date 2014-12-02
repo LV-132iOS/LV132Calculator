@@ -26,6 +26,7 @@
 		45AC546A1A260D5200A6CCA4 /* OutputDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AC54691A260D5200A6CCA4 /* OutputDisplay.m */; };
 		45AC546D1A260E1E00A6CCA4 /* RPNCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AC546C1A260E1E00A6CCA4 /* RPNCalculator.m */; };
 		45AC54711A26221A00A6CCA4 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AC54701A26221A00A6CCA4 /* Stack.m */; };
+		845D8F011A2D2D8A0082072C /* InputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 845D8F001A2D2D8A0082072C /* InputValidator.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,8 @@
 		45AC546C1A260E1E00A6CCA4 /* RPNCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPNCalculator.m; sourceTree = "<group>"; };
 		45AC546F1A26221A00A6CCA4 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		45AC54701A26221A00A6CCA4 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		845D8EFF1A2D2D8A0082072C /* InputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputValidator.h; sourceTree = "<group>"; };
+		845D8F001A2D2D8A0082072C /* InputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputValidator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +188,8 @@
 			children = (
 				45245AEA1A20E60C00845904 /* InputDisplay.h */,
 				45245AEB1A20E60C00845904 /* InputDisplay.m */,
+				845D8EFF1A2D2D8A0082072C /* InputValidator.h */,
+				845D8F001A2D2D8A0082072C /* InputValidator.m */,
 			);
 			name = Input;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45245ACC1A20DFA700845904 /* ViewController.m in Sources */,
+				845D8F011A2D2D8A0082072C /* InputValidator.m in Sources */,
 				45AC54711A26221A00A6CCA4 /* Stack.m in Sources */,
 				45AC546A1A260D5200A6CCA4 /* OutputDisplay.m in Sources */,
 				45245AEC1A20E60D00845904 /* InputDisplay.m in Sources */,
