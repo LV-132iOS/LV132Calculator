@@ -26,6 +26,7 @@
 		45AC546A1A260D5200A6CCA4 /* OutputDisplay.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AC54691A260D5200A6CCA4 /* OutputDisplay.m */; };
 		45AC546D1A260E1E00A6CCA4 /* RPNCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AC546C1A260E1E00A6CCA4 /* RPNCalculator.m */; };
 		45AC54711A26221A00A6CCA4 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = 45AC54701A26221A00A6CCA4 /* Stack.m */; };
+		8420D42E1A3F8B2900C45CA3 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8420D42D1A3F8B2900C45CA3 /* Entitlements.plist */; };
 		845D8F011A2D2D8A0082072C /* InputValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = 845D8F001A2D2D8A0082072C /* InputValidator.m */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +69,7 @@
 		45AC546C1A260E1E00A6CCA4 /* RPNCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RPNCalculator.m; sourceTree = "<group>"; };
 		45AC546F1A26221A00A6CCA4 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		45AC54701A26221A00A6CCA4 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
+		8420D42D1A3F8B2900C45CA3 /* Entitlements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Entitlements.plist; sourceTree = "<group>"; };
 		845D8EFF1A2D2D8A0082072C /* InputValidator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InputValidator.h; sourceTree = "<group>"; };
 		845D8F001A2D2D8A0082072C /* InputValidator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InputValidator.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,6 +101,7 @@
 		45245AA61A20DFA700845904 = {
 			isa = PBXGroup;
 			children = (
+				8420D42D1A3F8B2900C45CA3 /* Entitlements.plist */,
 				45245AB81A20DFA700845904 /* AOCalculator */,
 				45245ADA1A20DFA700845904 /* AOCalculatorTests */,
 				45245AB11A20DFA700845904 /* Frameworks */,
@@ -291,6 +294,7 @@
 				45245AC91A20DFA700845904 /* Main_iPad.storyboard in Resources */,
 				45245ACE1A20DFA700845904 /* Images.xcassets in Resources */,
 				45245AC61A20DFA700845904 /* Main_iPhone.storyboard in Resources */,
+				8420D42E1A3F8B2900C45CA3 /* Entitlements.plist in Resources */,
 				45245ABD1A20DFA700845904 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,7 +395,9 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -430,7 +436,9 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "-";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -453,12 +461,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				CODE_SIGN_IDENTITY = "-";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AOCalculator/AOCalculator-Prefix.pch";
 				INFOPLIST_FILE = "AOCalculator/AOCalculator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -469,12 +479,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_OBJC_ARC = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_ENTITLEMENTS = Entitlements.plist;
+				CODE_SIGN_IDENTITY = "-";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AOCalculator/AOCalculator-Prefix.pch";
 				INFOPLIST_FILE = "AOCalculator/AOCalculator-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

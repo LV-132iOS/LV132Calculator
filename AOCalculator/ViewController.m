@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import "InputValidator.h"
 
+
+#define FONT_SIZE 45
+
 @interface ViewController ()
 @property (strong, nonatomic)   InputValidator* inputValidator;
 @property (strong, nonatomic)   RPNCalculator* calculator;
@@ -136,7 +139,7 @@
     
     self.inputDisplay.attributedText = attributedString;
     self.inputDisplay.textAlignment = NSTextAlignmentLeft;
-    self.inputDisplay.font = [UIFont fontWithName:@"AppleSDGothicNeo-Thin" size:25];
+    self.inputDisplay.font = [UIFont fontWithName:@"AppleSDGothicNeo-Thin" size:FONT_SIZE];
 }
 
 
